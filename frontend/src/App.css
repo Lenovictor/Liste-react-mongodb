@@ -1,0 +1,90 @@
+.task-table{
+    width: 150%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.task-table th, .task-table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.task-table th{
+    text-align: center;
+}
+.task-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.task-table tr:hover{
+    background-color: #ddd;
+}
+.delete-btn{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.delete-btn:hover{
+    background-color: #ff1a1a;
+}
+.edit-btn{
+    background-color: #0004ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+.add-btn{
+    background-color: #00cc44;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+.edit-btn:hover{
+    background-color: #0000e6;
+}
+.add-btn:hover{
+    background-color: #009933;
+}
+input[type="text"]{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button{
+    margin: 5px;
+    border-radius: 5px;
+}
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+h1{
+    color: #333;
+}
+.add-task{
+    margin-bottom: 20px;
+}
+.refresh-btn{
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+.refresh-btn:hover{
+    background-color: #e68a00;
+}  
