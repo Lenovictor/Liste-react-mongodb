@@ -18,13 +18,11 @@ app.use(cors({
 }));
 
 // --- Database ---
-const MONGO_URI = process.env.MONGO_URI || 'lenovictor145_db_user:<azerty123@456>@cluster0.snz2dqe.mongodb.net/auth';
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(()=> console.log('Connected to MongoDB'))
-  .catch(err => {
-    console.error('MongoDB connection error:', err);
-    process.exit(1);
-  });
+const MONGO_URI = process.env.MONGO_URI; // Laisser Render gérer la priorité
+
+mongoose.connect(MONGO_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Erreur de connexion :', err));
 
 // --- Session ---
 const sessionSecret = process.env.SESSION_SECRET || 'please_change_this_secret';
