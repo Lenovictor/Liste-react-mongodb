@@ -17,12 +17,12 @@ app.use(cors({
   credentials: true
 }));
 
-// --- Database ---
-const MONGO_URI = process.env.MONGO_URI; // Laisser Render gérer la priorité
+const MONGO_URI = process.env.MONGO_URI; 
 
-mongoose.connect(MONGO_URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Erreur de connexion :', err));
+if (!MONGO_URI || !MONGO_URI.startsWith('mongodb')) {
+  console.error("ERREUR : MONGO_URI est manquante ou invalide dans les variables d'environnement.");
+  process.exit(1);
+}
 
 // --- Session ---
 const sessionSecret = process.env.SESSION_SECRET || 'please_change_this_secret';
