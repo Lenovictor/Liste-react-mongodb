@@ -1,41 +1,77 @@
 .task-table{
-    width: 150%;
+    width: 80%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.task-table th, .task-table td{
-    border: 1px solid #ddd;
+.task-table td{
+
+    border-bottom: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
+    font-weight:500;
+    
 }
 
 .task-table th{
     text-align: center;
+    padding: 12px;
 }
 .task-table tr:nth-child(even){
     background-color: #f2f2f2;
+    color:#0000e6;
 }
 .task-table tr:hover{
     background-color: #ddd;
 }
+.task-table thead tr th{
+    background-color: blue;
+    color: white;
+    border: none;
+}
+.task-table thead tr th:first-child{
+    border-top-left-radius: 20px;
+
+}
+.task-table thead tr th:last-child{
+    border-top-right-radius: 20px;
+
+}
+.task-table tbody tr:last-child td{
+    border-bottom: 4px solid blue;
+
+}
+.task-table tbody tr td:first-child{
+    border-right: none ;
+
+}
+
 .delete-btn{
     background-color: #ff4d4d;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 10px ;
 }
 .delete-btn:hover{
     background-color: #ff1a1a;
 }
-.edit-btn{
+.edit-btn, .save-btn{
     background-color: #0004ff;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 10px;
 
+}
+.save-btn{
+    background-color: #009c94;
+}
+.save-btn:hover{
+    background-color: #01cec4;
 }
 .add-btn{
     background-color: #00cc44;
@@ -61,17 +97,8 @@ input[type="text"]{
 }
 button{
     margin: 5px;
-    border-radius: 5px;
-}
-body{
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-h1{
-    color: #333;
+    border-radius: 10px;
+    font-weight:500;
 }
 .add-task{
     margin-bottom: 20px;
@@ -88,3 +115,92 @@ h1{
 .refresh-btn:hover{
     background-color: #e68a00;
 }  
+.task-input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 0;
+
+}
+.lougout-btn{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.logout-btn:hover{
+    background-color: #ff1a1a;
+}
+nav{
+    background-color: #e8ebff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+}
+.gest{
+    margin-right: auto;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 2em;
+}
+.gest:hover{
+    color: #00012e;
+}
+.register-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.register-container h2{
+    margin-bottom: 20px;
+}
+.register-container input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.register-container button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.register-container button:hover{
+    background-color: #45a049;
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.login-container h2{
+    margin-bottom: 20px;
+}
+.login-container input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.login-container button{
+    padding: 10px 20px;
+    border: none;}
