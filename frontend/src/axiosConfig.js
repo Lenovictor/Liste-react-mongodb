@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://liste-react-mongodb-backend.onrender.com",
+  baseURL: "https://liste-react-mongodb.onrender.com/",
   withCredentials: true,
 });
 
