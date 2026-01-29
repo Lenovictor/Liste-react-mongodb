@@ -18,7 +18,7 @@ app.use(cors({
 }));
 
 // --- Database ---
-const MONGO_URI = process.env.MONGO_URI || 'lenovictor145_db_user:<azerty123@456>@cluster0.snz2dqe.mongodb.net/?appName=Cluster0/auth';
+const MONGO_URI = process.env.MONGO_URI || 'lenovictor145_db_user:<azerty123@456>@cluster0.snz2dqe.mongodb.net/auth';
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(()=> console.log('Connected to MongoDB'))
   .catch(err => {
